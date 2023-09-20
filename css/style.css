@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body > * {
+    padding: 2rem;
+}
+
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+header {
+    display: grid;
+    justify-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 1rem 10rem;
+}
+
+img {
+   max-width: 320px;
+}
+
+header a {
+    color: red;
+    text-decoration: none;
+}
+
+header a:hover {
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+}
+
+main {
+    background-color: blanchedalmond;
+}
+
+main h2 {
+    margin-top: 2.5rem;
+}
+
+main img {
+    padding: 1rem 0;
+    border-radius: 3rem;
+}
+
+main ul {
+    list-style: none;
+    padding: 0;
+}
+
+main ul li {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+p {
+    max-width: 35rem;
+    line-height: 2rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 0.2rem 0;
+}
+
+@media  (min-width: 768px) {
+    body > * {
+        padding: 2rem 20vw;
+    }
+    header {
+        grid-template-columns: auto 1fr;
+    }
+}
+
+@media  (min-width: 1600px) {
+    body > * {
+        padding: 2rem 25vw;
+    }
+    header nav ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    header nav ul li a {
+        padding: 1rem 3rem;
+    }
+}
