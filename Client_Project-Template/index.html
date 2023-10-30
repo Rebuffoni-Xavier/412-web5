@@ -1,12 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr"
+x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}"
+>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="copyright" content="Copyright 1999-2020. Plesk International GmbH. All rights reserved.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Client Project Template</title>
+
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+
+    <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 <body>
+    <header class="header">
+        <a href="/index.html">
+            <img class="header_logo" src="/icon/Final.png" alt="Logo">
+        </a>
+
+        <button aria-controls="mainNav"
+            @click="menuIsOpen = ! menuIsOpen"
+            class="header__btn"
+            >
+                <img src="./icon/hamburger-menu-svgrepo-com.svg" alt="logo menu" class="header__btn--menu">
+        </button>
+
+        <nav id="mainNav"
+            x-show="menuIsOpen"
+            x-transition.duration.800ms
+            class="header__menu menu"
+        >
+            <button class="menu__close" @click="menuIsOpen= ! menuIsOpen">
+                <img class="menu__close--img" src="./icon/cross-svgrepo-com.svg" alt="Image bouton pour fermer le menu">
+            </button>
+
+            <ul class="menu__items items">
+                <li class="items__li1"><a href="/Animation/index.html" class="items__li1--title">Animations</a></li>
+                <li class="items__li2"><a href="/Timer_App/index.html" class="items__li2--title">Timer App</a></li>
+                <li class="items__li3"><a href="/video/index.html" class="items__li3--title">Video</a></li>
+                <li class="items__li4"><a href="/Portfolio/index.html" class="items__li4--title">Portfolio</a></li>
+            </ul>
+        </nav>
+
+        <ul class="menu_largescreen">
+            <li class="items__li1"><a href="/Animation/index.html" class="items__li1--title">Animations</a></li>
+            <li class="items__li2"><a href="/Timer_App/index.html" class="items__li2--title">Timer App</a></li>
+            <li class="items__li3"><a href="/video/index.html" class="items__li3--title">Video</a></li>
+            <li class="items__li4"><a href="/Portfolio/index.html" class="items__li4--title">Portfolio</a></li>
+        </ul>
+    </header>
     <main>
         <header>
             <h1>Dasle Développement Durable</h1>
@@ -15,6 +60,15 @@
 
             <img src="./img/IMG_20201205_165319.jpg" alt="Image principale">
         </header>
+
+        <section>
+            <h2>Actualités</h2>
+
+            <article>
+                <img src="#" alt="Affiche Marché Durable Local">
+                <p>Notre premier Marché Durable Local a eu lieu le 1er avril 2023 !</p>
+            </article>
+        </section>
     </main>
 </body>
 </html>
