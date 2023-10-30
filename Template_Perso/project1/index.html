@@ -1,100 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr"
+x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}"
+>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="copyright" content="Copyright 1999-2020. Plesk International GmbH. All rights reserved.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1</title>
-    <link rel="icon" href="/Template_Perso/icons/photo-camera.png">
-    <link rel="stylesheet" href="/Template_Perso/project1/css/style.css">
+
+    <title>Template Portfolio</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+
+    <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
-
 <body>
-    <header>
-        <a href="#">Project 1</a>
-        <a href="/Template_Perso/project2/index.html">Project 2</a>
-        <a href="#">Project 3</a>
+    <header class="header">
+        <a href="/index.html">
+            <img class="header_logo" src="../icons/Final.png" alt="Logo">
+        </a>
 
-        <button>
-            <img src="/Template_Perso/icons/menu.png" alt="">
+        <button aria-controls="mainNav"
+            @click="menuIsOpen = ! menuIsOpen"
+            class="header__btn"
+            >
+                <img src="../icons/hamburger-menu-svgrepo-com.svg" alt="logo menu" class="header__btn--menu">
         </button>
 
-        <nav>
-            <ul>
-                <li><a href="">Project 1</a></li>
-                <li><a href="">Project 2</a></li>
-                <li><a href="">Project 3</a></li>
+        <nav id="mainNav"
+            x-show="menuIsOpen"
+            x-transition.duration.800ms
+            class="header__menu menu"
+        >
+            <button class="menu__close" @click="menuIsOpen= ! menuIsOpen">
+                <img class="menu__close--img" src="../icons/cross-svgrepo-com.svg" alt="Image bouton pour fermer le menu">
+            </button>
+
+            <ul class="menu__items items">
+                <li class="items__li1"><a href="./project1/index.html" class="items__li1--title">Photography</a></li>
+                <li class="items__li2"><a href="/Timer_App/index.html" class="items__li2--title">Nos Projets</a></li>
+                <li class="items__li3"><a href="/video/index.html" class="items__li3--title">Ecologie</a></li>
+
             </ul>
         </nav>
+
+        <ul class="menu_largescreen">
+            <li class="items__li1"><a href="./project1/index.html" class="items__li1--title">Photography</a></li>
+            <li class="items__li2"><a href="/Timer_App/index.html" class="items__li2--title">Nos Projets</a></li>
+            <li class="items__li3"><a href="/video/index.html" class="items__li3--title">Ecologie</a></li>
+        </ul>
     </header>
-
     <main>
+        <header>
+            <h1>Photography</h1>
+
+            <p>My first project is about photography</p>
+
+            <img src="./img/Main.webp" alt="Image principale">
+        </header>
+
         <section>
-            <header>
-                <h1>Project 1</h1>
-                <img src="/Template_Perso/img/Photography.png" alt="Quelques unes de mes photos">
-                <p>Voici mon projet n°1 qui concerne une de mes plus grandes passions : la photographie.</p>
-            </header>
+            <article>
+                <div>
+                    <a href="#">
+                        <h2>Landscapes</h2>
+                    </a>
+                </div>
 
-            <article>
-                <h2>Comment je prends mes photos ?</h2>
-                <p>Je prends mes photos avec un Canon EOS R10.</p>
-            </article>
-            
-            <article>
-                <h2>Photos nature</h2>
-                <p>Voici quelques unes de mes photos de la nature.</p>
-                <img src="/Template_Perso/img/Nature_1.JPG" alt="">
-                <img src="/Template_Perso/img/Nature_2.JPG" alt="">
+                <img src="./img/Landscapes.webp" alt="Landscapes">
             </article>
 
             <article>
-                <h2>Photos de ville</h2>
-                <p>Voici quelques unes de mes photos en ville.</p>
-                <img src="/Template_Perso/img/Ville_1.JPG" alt="">
-                <img src="/Template_Perso/img/Ville_2.JPG" alt="">
+                <div>
+                    <a href="#">
+                        <h2>Animals</h2>
+                    </a>
+                </div>
+
+                <img src="./img/Animals.webp" alt="Animals">
             </article>
 
             <article>
-                <h2>Photos d'animaux</h2>
-                <p>Voici quelques unes de mes photos d'animaux.</p>
-                <img src="/Template_Perso/img/Animal_1.JPG" alt="">
-                <img src="/Template_Perso/img/Animal_2.JPG" alt="">
+                <div>
+                    <a href="#">
+                        <h2>Flowers</h2>
+                    </a>
+                </div>
+
+                <img src="./img/Flowers.webp" alt="Flowers">
             </article>
 
             <article>
-                <h2>Photos de fleurs</h2>
-                <p>Voici quelques unes de mes photos de fleurs.</p>
-                <img src="/Template_Perso/img/Fleur_1.JPG" alt="">
-                <img src="/Template_Perso/img/Fleur_2.JPG" alt="">
+                <div>
+                    <a href="#">
+                        <h2>City</h2>
+                    </a>
+                </div>
+
+                <img src="./img/City.webp" alt="City">
+            </article>
+
+            <article>
+                <div>
+                    <a href="#">
+                        <h2>Sunset</h2>
+                    </a>
+                </div>
+
+                <img src="./img/Sunset.webp" alt="Sunset">
             </article>
         </section>
     </main>
-
-    <footer>
-        <div>
-            <h5>About Me</h5>
-        </div>
-
-        <div>
-            <h5>Portfolio</h5>
-
-            <nav>
-                <li><a href="">Project 1</a></li>
-                <li><a href="">Project 2</a></li>
-                <li><a href="">Project 3</a></li>
-            </nav>
-        </div>
-
-        <div>
-            <h5>Follow me</h5>
-
-            <ul>
-                <li><a href=""><img src="" alt="Logo_Instagram"></a></li>
-                <li><a href=""><img src="" alt="Logo_Mail"></a></li>
-                <li><a href=""><img src="" alt="Logo_LinkedIn"></a></li>
-                <li><a href=""><img src="" alt="Logo_Youtube"></a></li>
-            </ul>
-        </div>
-    </footer>
 </body>
 </html>
