@@ -8,10 +8,16 @@ body {
     background-color: black;
 }
 
+
 .header {
     position: absolute;
     left: 0;
     right: 0;
+    display: flex;
+}
+
+.back__icon {
+    width: 80px;
 }
 
 h1 {
@@ -21,8 +27,7 @@ h1 {
     font-size: 32px;
 }
 
-.principal {
-    background-image: url(../img/Landscapes.webp);
+.principal__landscapes, .principal__animals, .principal__flowers, .principal__city, .principal__sunset {
     background-size: cover;
     background-position: center;
     padding-top: 100px;
@@ -30,10 +35,30 @@ h1 {
     padding-left: 1rem;
 }
 
+.principal__landscapes {
+    background-image: url(../img/main/IMG_1435.JPG);
+}
+
+.principal__animals {
+    background-image: url(../img/main/IMG_2110.JPG);
+}
+
+.principal__flowers {
+    background-image: url(../img/main/IMG_2155.JPG);
+}
+
+.principal__city {
+    background-image: url(../img/main/IMG_2576.JPG);
+}
+
 .principal p {
     font-family: 'Montserrat', sans-serif;
     color: white;
     margin-top: 5rem;
+}
+
+.principal__sunset {
+    background-image: url(../img/main/IMG_1850.JPG);
 }
 
 section {

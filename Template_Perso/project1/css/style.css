@@ -22,7 +22,7 @@ h1 {
 }
 
 .principal {
-    background-image: url(../img/Main.webp);
+    background-image: url(../img/main/Screen.jpg);
     background-size: cover;
     background-position: center;
     padding-top: 100px;
@@ -78,23 +78,23 @@ h2 {
 }
 
 .landscapes {
-    background-image: url(../img/Landscapes.webp);
+    background-image: url(../img/main/IMG_1435.JPG);
 }
 
 .animals {
-    background-image: url(../img/Animals.webp);
+    background-image: url(../img/main/IMG_2110.JPG);
 }
 
 .flowers {
-    background-image: url(../img/Flowers.webp);
+    background-image: url(../img/main/IMG_2155.JPG);
 }
 
 .city {
-    background-image: url(../img/City.webp);
+    background-image: url(../img/main/IMG_2576.JPG);
 }
 
 .sunset {
-    background-image: url(../img/Sunset.webp);
+    background-image: url(../img/main/IMG_1850.JPG);
 }
 
 section {
