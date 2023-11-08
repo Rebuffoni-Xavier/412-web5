@@ -24,6 +24,7 @@ h1 {
 .principal {
     background-image: url(../img/Landscapes.webp);
     background-size: cover;
+    background-position: center;
     padding-top: 100px;
     height: 800px;
     padding-left: 1rem;
@@ -36,15 +37,15 @@ h1 {
 }
 
 section {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2rem;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+    gap: 1rem;
+    margin: 1rem;
 }
 
 .main_img {
-    width: 335px;
-    height: 200px;
+    width: 100%;
+    height: auto;
     margin: auto;
     border-radius: 10px;
     border: white 1px solid;
