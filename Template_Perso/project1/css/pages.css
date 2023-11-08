@@ -34,3 +34,20 @@ h1 {
     color: white;
     margin-top: 5rem;
 }
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem;
+    gap: 2rem;
+}
+
+.main_img {
+    width: 335px;
+    height: 200px;
+    margin: auto;
+    border-radius: 10px;
+    border: white 1px solid;
+    position: relative;
+    margin-top: 2rem;
+}
