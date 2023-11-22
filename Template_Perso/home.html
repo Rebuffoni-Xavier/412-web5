@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr"
+x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}"
+>
+<head>
+    <meta charset="utf-8">
+    <meta name="copyright" content="Copyright 1999-2020. Plesk International GmbH. All rights reserved.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Template Portfolio</title>
+
+    <link rel="stylesheet" href="./src/css/base/main.css">
+    <link rel="stylesheet" href="./src/css/layout/header.css">
+    <link rel="stylesheet" href="./src/css/components/carousel.css">
+    <link rel="stylesheet" href="./src/css/components/button.css">
+
+    <script defer src="https://unpkg.com/alpinejs"></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/index.html">
+            <img class="header_logo" src="./public/icons/Final.png" alt="Logo">
+        </a>
+
+        <button aria-controls="mainNav"
+            @click="menuIsOpen = ! menuIsOpen"
+            class="header__btn"
+            >
+                <img src="./public/icons/hamburger-menu-svgrepo-com.svg" alt="logo menu" class="header__btn--menu">
+        </button>
+
+        <nav id="mainNav"
+            x-show="menuIsOpen"
+            x-transition.duration.800ms
+            class="header__menu menu"
+        >
+            <button class="menu__close" @click="menuIsOpen= ! menuIsOpen">
+                <img class="menu__close--img" src="./public/icons/cross-svgrepo-com.svg" alt="Image bouton pour fermer le menu">
+            </button>
+
+            <ul class="menu__items items">
+                <li class="items__li1"><a href="./photography/index.html" class="items__li1--title">Photography</a></li>
+                <li class="items__li2"><a href="/Timer_App/index.html" class="items__li2--title">School Projects</a></li>
+                <li class="items__li3"><a href="/video/index.html" class="items__li3--title">About</a></li>
+
+            </ul>
+        </nav>
+
+        <ul class="menu_largescreen">
+            <li class="items__li1"><a href="./photography/index.html" class="items__li1--title">Photography</a></li>
+            <li class="items__li2"><a href="/Timer_App/index.html" class="items__li2--title">School Projects</a></li>
+            <li class="items__li3"><a href="/video/index.html" class="items__li3--title">About</a></li>
+        </ul>
+    </header>
+    <main>
+        <section class="carousel-container">
+            <div class="carousel-wrapper">
+                <div class="carousel-item">
+                    <p class="header--p">Hi, my name is</p>
+    
+                    <h1>Xavier REBUFFONI</h1>
+
+                    <div class="header__intro">
+                        <img class="img__principale" src="./public/img/home/1694300345935.jpg" alt="Image principale">
+            
+                        <p class="header--p">I'm a student from the University of Franche-Comté. I am in second year of MMI (Métier du Multimédia et de l'Internet).</p>
+                    </div>
+        
+                    <a class="button" href="#">
+                        Learn more about me
+                        <img class="button--img" src="./public/icons/arrow-sm-right-svgrepo-com.svg" alt="Arrow Right">
+                    </a>
+                </div>
+
+                <div class="carousel-item" id="photography">
+                    <div class="photography__intro">
+                        <h2>Photography</h2>
+    
+                        <!-- <img class="img__photography" src="./public/img/photography/main/Screen.jpg" alt="Image photography"> -->
+    
+                        <p>My first project is about photography.</p>
+                    </div>
+
+                    <a class="button" id="photography__button" href="#">
+                        Learn more
+                        <img class="button--img" src="./public/icons/arrow-sm-right-svgrepo-com.svg" alt="Arrow Right">
+                    </a>
+                </div>
+
+                <div class="carousel-item">
+                  <h2>School Projects</h2>
+                </div>
+
+                <div class="carousel-item">
+                    <h2>Contact</h2>
+                </div>
+            </div>
+            
+            <button class="carousel-btn prev-btn" onclick="prevSlide()">
+                <svg class="prev-btn img-btn" width="16" height="27" viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.4167 3L3 13.4167L13.4167 23.8333" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                    
+                <!-- <img class="prev-btn img-btn" src="./public/icons/left.svg" alt="Arrow Right"> -->
+            </button>
+            <button class="carousel-btn next-btn" onclick="nextSlide()">
+                <svg class="next-btn img-btn" width="16" height="27" viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.58334 3L13 13.4167L2.58334 23.8333" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
+                <!-- <img class="next-btn img-btn" src="./public/icons/right.svg" alt="Arrow Left"> -->
+            </button>
+
+            <div class="carousel-dots"></div>
+        </section>
+
+        <section>
+        </section>
+
+        <section>
+            <div class="carousel-container">
+                
+            </div>
+        </section>
+    </main>
+
+    <script src="./src/js/components/carousel.js"></script>
+</body>
+</html>

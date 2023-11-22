@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+
+.header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.back__icon {
+    width: 80px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: White;
+    font-size: 32px;
+}
+
+.principal__landscapes, .principal__animals, .principal__flowers, .principal__city, .principal__sunset {
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+    height: 800px;
+    padding-left: 1rem;
+}
+
+.principal__landscapes {
+    background-image: url(../../../public/img/photography/main/IMG_1435.JPG);
+}
+
+.principal__animals {
+    background-image: url(../../../public/img/photography/main/IMG_2110.JPG);
+}
+
+.principal__flowers {
+    background-image: url(../../../public/img/photography/main/IMG_2155.JPG);
+}
+
+.principal__city {
+    background-image: url(../../../public/img/photography/main/IMG_2576.JPG);
+}
+
+.principal p {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-top: 5rem;
+}
+
+.principal__sunset {
+    background-image: url(../../../public/img/photography/main/IMG_1850.JPG);
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.main_img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
+    border: white 1px solid;
+    position: relative;
+    margin-top: 1rem;
+    padding: 0;
+    margin: 0;
+}

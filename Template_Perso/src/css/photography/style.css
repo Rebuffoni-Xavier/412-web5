@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: White;
+    font-size: 32px;
+}
+
+.principal {
+    background-image: url(../../../public/img/photography/main/Screen.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+    height: 800px;
+    padding-left: 1rem;
+}
+
+.principal p {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-top: 5rem;
+}
+
+article div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.6;
+    border-radius: 20px;
+}
+
+.link__pages {
+    position: absolute;
+    text-decoration: none;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.landscapes, .animals, .flowers, .city, .sunset {
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    border-radius: 20px;
+    border: white 1px solid;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.landscapes {
+    background-image: url(../../../public/img/photography/main/IMG_1435.JPG);
+}
+
+.animals {
+    background-image: url(../../../public/img/photography/main/IMG_2110.JPG);
+}
+
+.flowers {
+    background-image: url(../../../public/img/photography/main/IMG_2155.JPG);
+}
+
+.city {
+    background-image: url(../../../public/img/photography/main/IMG_2576.JPG);
+}
+
+.sunset {
+    background-image: url(../../../public/img/photography/main/IMG_1850.JPG);
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+    gap: 1rem;
+    margin: 1rem;
+}

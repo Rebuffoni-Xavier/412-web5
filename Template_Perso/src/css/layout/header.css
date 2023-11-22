@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.header {
+    padding: 20px;
+    padding-top: 12px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+}
+
+.header_logo {
+    width: 50px;
+}
+
+.header__btn {
+    appearance: none;
+    border: none;
+    background: none;
+    padding: none;
+    cursor: pointer;
+}
+
+.header__btn--menu {
+    width: 40px;
+}
+
+@media screen and (min-width: 1150px) {
+    .header__btn--menu {
+        display: none;
+    }
+
+    .header__btn--close {
+        display: none;
+    }
+
+    .menu_largescreen {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .menu_largescreen {
+        display: none;
+    }
+}
+
+
+.menu {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100vW;
+    height: 100vH;
+    background: #72ACCD;
+    display: grid;
+    place-content: left;
+    z-index: 3;
+    }
+
+    .noscroll,
+    .noscroll body {
+    overflow: hidden;
+}
+
+.menu__close {
+    position: fixed;
+    appearance: none;
+    border: none;
+    background: none;
+    padding: none;
+    cursor: pointer;
+    right: 5px;
+    margin-top: 1rem;
+}
+
+.menu__close--img {
+    width: 40px;
+}
+
+.menu__items {
+    margin: 0;
+    padding: 0;
+    margin-top: 6rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
+    margin-left: 2rem;
+    font-size: 24px;
+}
+
+.menu_largescreen {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-direction: row;
+    gap: 30px;
+    text-align: center;
+}
+
+.items__li1--title, .items__li2--title, .items__li3--title, .items__li4--title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* .items__li1--title:hover, .items__li2--title:hover, .items__li3--title:hover, .items__li4--title:hover {
+    color: green;
+    border-bottom: solid 5px green;
+    font-weight: bold;
+    padding-bottom: 5px;
+} */

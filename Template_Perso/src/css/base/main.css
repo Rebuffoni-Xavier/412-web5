@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    background-image: url(../../../public/img/home/sl_121019_25870_78.jpg);
+    background-size: cover;
+}
+
+main {
+    width: 75.05%;
+    margin: auto;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: black;
+    font-size: 32px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: black;
+    font-size: 25px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.header__intro {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.img__principale {
+    width: 200px;
+    border-radius: 50%;
+    border: solid 2px black;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.img__photography {
+    width: 50%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#photography {
+    background-image: url(../../../public/img/photography/main/Screen.jpg);
+    background-position: center;
+    padding-left: 0px;
+    margin-top: 7px;
+}
+
+.photography__intro {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#photography__button {
+    margin-left: 20px;
+    margin-top: 2rem;
+}
+
+/* @media screen and (max-width: 880px) {
+    body {
+        background-size: cover;
+        height: 800px;
+        background-position: center;
+    }
+} */
+
+@media screen and (max-width: 1150px) {
+    .img__principale {
+        width: 150px;
+    }
+    body {
+        background-size: cover;
+        height: 800px;
+        background-position: center;
+    }
+    #photography {
+        padding-bottom: 244px;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .img__principale {
+        width: 95px;
+    }
+    #photography {
+        padding-bottom: 263px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header__intro {
+        grid-template-columns: none;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    #photography {
+        padding-bottom: 244px;
+    }
+}
+
+/*@media screen and (max-width: 1250px) {
+    #photography {
+        padding-bottom: 232px;
+    }
+}*/
+
+/* @media screen and (max-width: 1373px) {
+    #photography {
+        padding-bottom: 232px;
+    }
+} */
